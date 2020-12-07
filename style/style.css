@@ -1,0 +1,489 @@
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+@font-face {
+ font-family: "iciel-kermel";
+ src: url("/fonts/iciel-kermel-webfont.woff2") format("woff2"),
+        url("/fonts/iciel-kermel-webfont.woff") format("woff");
+}
+html,body{
+  padding:0;
+  margin:0;
+}
+body {
+  overflow-x: hidden;
+}
+
+.debug{
+  display: block!important;
+}
+
+
+#container {
+  background-color:grey;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  height:100vh;
+}
+.no-scroll{
+  overflow: hidden !important;
+}
+.display-none{
+  display: none;
+}
+.landing-page{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.landing-page-background{
+  position: absolute;
+  width: 105%;
+  bottom: -5vh;
+}
+.landing-page-background svg{
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.landing-page-bottle-btn{
+  cursor: pointer;
+}
+.landing-page-bottle{
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  right: 20vw;
+  bottom: 15vh;
+  animation-name: turtle_pow_right_animation_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  /*transition: 2s animation ease;*/
+  
+}
+.landing-page-bottle svg{
+  width: 100%;
+  height: 100%;
+}
+.landing-page-parchment{
+  position: absolute;
+  z-index: 999;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+.landing-page-parchment svg{
+  width: 100%;
+  height: 100%;
+}
+.landing-page-parchment-content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-page-parchment-content div{
+  width: 80%;
+  height: 80%;
+  overflow-y: auto;
+  display: grid;
+}
+.landing-page-parchment-content h1{
+  font-size: 1.5em;
+}
+.landing-page-parchment-content p{
+  font-size: 1.2em;
+  color: black!important;
+}
+.landing-page-title{
+  font-family: iciel-kermel;
+  font-size: 10em;
+  transform: translateY(-10vh);
+  color: #00579B;
+  font-weight: normal;
+}
+.landing-page-content{
+  width: 60%;
+}
+.signature{
+  font-family: iciel-kermel;
+  color: #00579B;
+  font-size: 3em!important;
+}
+.landing-page-sound{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.landing-page-sound svg{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn{
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  user-select: none;
+}
+.hide{
+  display: none;
+}
+
+.background-1{
+  background-image: url("../images/parallax1.svg");
+  background-repeat: repeat;
+  position: absolute;
+  z-index: 2;
+  bottom: -100px;
+  left: -150vw;
+  height: 400px;
+  width:1000vw;
+}
+.background-2{
+  background-image: url("../images/parallax2.svg");
+  background-repeat: repeat;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: -170vw;
+  height: 450px;
+  width: 800vw;
+}
+.module{
+  height:100%;
+  display:flex;
+}
+
+.module-go-up{
+  height: 200vh!important;
+  width: 3000px;
+  background : linear-gradient(#217cfc,#145cee,#251edb, #100e82);
+  transform: translateY(-100vh);
+}
+.module-go-down{
+  height: 200vh!important;
+  width: 3000px;
+  background : linear-gradient(#217cfc,#145cee,#251edb, #100e82);
+}
+
+.green{
+  width:3000px;
+  background-color:green;
+}
+
+.yellow{
+  width:110vw;
+  background-color: #217cfc;
+}
+.morty-container{
+  /*TEMP*/
+  cursor: pointer;
+  width: 15vh;
+  height: 15vh;
+  position: absolute;
+  left: 60%;
+  bottom: 100px;
+}
+.morty-container svg{
+  transform: scale(-1,1);
+}
+
+.purple{
+  width:1200px;
+  background-color:white;
+}
+#chart{
+  position: absolute;
+  top:20px;
+  right:20px; 
+}
+
+.orange{
+  width:800px;
+  background-color:orange;
+}
+
+.blue{
+  width:2100px;
+  background-color:blue;
+}
+
+.red{
+  width:900px;
+  background-color:red;
+}
+.seahorse-container{
+  width: 7vw;
+  height: 7vh;
+  z-index: 1000;
+  position: fixed;
+  top: 55%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.seahorse{
+  /*TEMP*/
+  animation-name: turtle_global_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  transition: 2s animation ease;
+  animation-delay: 0.5s;
+}
+.svg-seahorse{
+  width: 100%;
+  height: 100%;
+  transition: 0.5s all ease;
+  transform: scale(-1, 1);
+  overflow: visible;
+}
+
+.turtle-container{
+  width: 25vw;
+  height: 25vh;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.svg-turtle{
+  width: 100%;
+  height: 100%;
+  transition: 0.5s all ease;
+  overflow: visible;
+}
+
+.turtle{
+  animation-name: turtle_global_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  transition: 2s animation ease;
+}
+
+.turtle-paw1,
+.turtle-paw3{
+  animation-name: turtle_pow_right_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+}
+
+.turtle-paw2,
+.turtle-paw4{
+  animation-name: turtle_pow_left_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+}
+
+.turtle-head{
+  animation-name: turtle_head_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+}
+.turtle-shell{
+  animation-name: turtle_shell_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+}
+.turtle-tail{
+  animation-name: turtle_tail_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+}
+
+.animated-element{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  top: 20%;
+  left: 40%;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+/*Subtitles*/
+.subtitles {
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+  right: 10px;
+  width: fit-content;
+  margin: auto;
+  z-index: 999;
+  text-align: center;
+  transition: 0.5s opacity ease;
+}
+.subtitles p{
+  padding: 10px;
+  background: black;
+  color: white;
+}
+.turtle-dialogue{
+  color:#d97398;
+  font-weight:bold;
+}
+.seahorse-dialogue{
+  color:#e8a246;
+  font-weight:bold;
+}
+/*Scroll button*/
+.scrollIndication {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  margin: auto;
+  width : 34px;
+  height: 55px;
+  z-index: 999;
+  transition: 0.5s opacity ease;
+}
+.mouse {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { transform: translateY(-2px);opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0;}
+}
+
+
+
+
+
+/*TEMP*/
+
+.morty-friend{
+  position: absolute;
+  left: 70%;
+  bottom: 400px;
+  width: 15vh;
+  height: 15vh;
+  animation-name: turtle_global_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  transition: 4s animation ease;
+  animation-delay: 0.2s;
+}
+.morty-friend svg{
+  transform: scale(-1,1) rotate(80deg);
+}
+.morty-open{
+  position: absolute;
+  transform: rotate(20deg) translate(-1.2vh, 2.2vh);
+  width: 17.5vh;
+  height: auto;
+  z-index: 15;
+  transition: 0.5s all ease;
+}
+
+.morty-bigger{
+  transform: scale(5,5) rotate(-20deg);
+}
+
+.wave1{
+  animation-name: turtle_global_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  transition: 4s animation;
+}
+.wave2{
+  animation-name: turtle_global_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  transition: 3s animation;
+  animation-delay: 0.5s;
+}
+.wave3{
+  animation-name: turtle_global_animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: play;
+  transition: 2s animation;
+  animation-delay: 0.1s;
+}
+
+.ending-page{
+  background-color: white;
+  z-index: 9999;
+  width: 100vW;
+  height: 100vh;
+}
+.ending-page-container{
+  position: absolute;
+  height: 100vh;
+  right: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ending-page-container h1{
+  font-family: iciel-kermel;
+  color: #00579B;
+  font-size: 5em!important;
+}
+.ending-page-container span{
+  color: #00579B;
+}
+.bottle-parchment{
+  transition: 0.5s opacity ease;
+}

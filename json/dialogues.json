@@ -1,0 +1,16 @@
+{
+  "0":{
+    "0": "Inspecteur Torty : Bonsoir",
+    "1": "Professeur Palmer : Bonsoir à tous !",
+    "2": "Foule : AHAHHAHAHAHAHH",
+  },
+  "1":{
+    "0": "Foule : Au secours",
+    "1": "Professeur Palmer : Que se passe t'il ?",
+  },
+  "2":{
+    "0": "Inspecteur Torty : Il s'agit d'un meurtre",
+    "1": "Professeur Palmer : Ah !",
+    "2": "Inspecteur Torty : Aller ++",
+  }
+}

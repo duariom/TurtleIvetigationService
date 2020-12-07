@@ -1,0 +1,163 @@
+
+
+@keyframes turtle_global_animation{
+  0%{
+    transform: translate( 20px, 10px );
+  }
+  12%{
+    transform: translate( 25px, 0px );
+  }
+  25%{
+    transform: translate( 20px, -10px );
+  }
+  38%{
+    transform: translate( 10px, -15px );
+  }
+  50%{
+    transform: translate( 0px, -10px );
+  }
+  62%{
+    transform: translate( -5px, 0px );
+  }
+  75%{
+    transform: translate( 0px, 10px );
+  }
+  87%{
+    transform: translate( 10px, 15px );
+  }
+  100%{
+    transform: translate( 20px, 10px );
+  }
+}
+
+@keyframes turtle_pow_left_animation{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(-2deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes turtle_pow_right_animation{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(2deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes turtle_eye_animation{
+  0%{
+    transform: scale(0deg, 0deg );
+  }
+  50%{
+    transform: skew(10deg, 10deg );
+  }
+  100%{
+    transform: skew(0deg, 0deg );
+  }
+}
+
+
+@keyframes turtle_head_animation{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(1deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes turtle_shell_animation{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(1deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes turtle_tail_animation{
+  0%{
+    transform: rotate(0deg);
+    transform: translateX(10px);
+  }
+  50%{
+    transform: rotate(-3deg);
+    transform: translateX(0px);
+  }
+  100%{
+    transform: rotate(0deg);
+    transform: translateX(10px);
+  }
+}
+
+
+@keyframes turtle_global_animation_move{
+  0%{
+    transform: translate( 0px, 0px );
+    
+  }
+  12%{
+    transform: translate( 10px, 20px );
+  }
+  25%{
+    transform: translate( 30px, 40px );
+  }
+  38%{
+    transform: translate( 10px, 20px );
+  }
+  50%{
+    transform: translate( 0px, 0px);
+  }
+  68%{
+    transform: translate( 10px, -20px);
+  }
+  75%{
+    transform: translate( 0px, -40px);
+  }
+  87%{
+    transform: translate( 20px, -20px);
+  }
+  100%{
+    transform: translate( 0px, 0px);
+  }
+}
+@keyframes turtle_pow_left_animation_move{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(-2deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes turtle_pow_right_animation_move{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(4deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}

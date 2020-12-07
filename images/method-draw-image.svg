@@ -1,0 +1,35 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="482" width="642" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g class="turtle">
+  <g>
+    <title>Corps</title>
+    <ellipse transform="rotate(-12.536993026733398 286.99999999999994,200.4531250000001) " stroke="#000" ry="73" rx="164.5" id="svg_1" cy="200.45312" cx="287" stroke-width="1.5" fill="#000000"/>
+   </g>
+   <g>
+    <title>patte1</title>
+    <ellipse stroke="#000" transform="rotate(30.046133041381836 157.56416320800753,299.64709472656256) " ry="83.10449" rx="31.5" id="svg_3" cy="299.64709" cx="157.56417" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+   </g>
+   <g>
+    <title>patte2</title>
+    <ellipse transform="rotate(8.684924125671387 195.00000000000009,313.453125) " stroke="#000" ry="66" rx="31.5" id="svg_5" cy="313.45313" cx="195" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+   <g>
+    <title>patte3</title>
+    <ellipse stroke="#000" transform="rotate(14.89075756072998 395.5641784667964,267.6470947265625) " ry="83.10449" rx="31.5" id="svg_6" cy="267.64709" cx="395.56417" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+   </g>
+   <g>
+    <title>patte4</title>
+    <ellipse transform="rotate(-10.441463470458984 427.9999999999997,249.45312500000006) " stroke="#000" ry="66" rx="31.5" id="svg_7" cy="249.45313" cx="428" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+   </g>
+   <g>
+    <title>tete</title>
+    <ellipse transform="rotate(57.90198516845703 479,127.45312499999996) " stroke="#000" ry="66" rx="31.5" id="svg_8" cy="127.45313" cx="479" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+   </g>
+ </g>
+</svg>

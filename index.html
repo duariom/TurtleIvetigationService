@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bleu Plastique</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link href="style/animation.css" rel="stylesheet" type="text/css" />
+    <link href="style/data.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  </head>
+  <body class="no-scroll">
+    <div class="landing-page">
+      <div class="landing-page-background">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1927.034" height="386.847" viewBox="0 0 1927.034 386.847">
+        <g class="wave1">
+          <path id="Tracé_4" data-name="Tracé 4" d="M-1,839.224S462.748,725.4,894.23,719.136s944.257,156.626,1031.8,156.626c-12.507,93.975,0,188.121,0,188.121H-1Z" transform="translate(1 -706.557)" fill="rgba(0,87,155,0.6)"/>
+        </g>
+        <g class="wave2">
+          <path id="Tracé_6" data-name="Tracé 6" d="M0,799.679s407.023-78.118,658.638-81.837S1839,866.637,1920.409,862.917v224.2H0Z" transform="translate(1 -717.774)" fill="rgba(0,87,155,0.6)"/>
+        </g>
+        <g class="wave3">
+          <path id="Tracé_7" data-name="Tracé 7" d="M0,812.011s1128.1-98.1,1392.408-68.122,460.5,152.593,520.45,158.042c8.175,144.418,0,146.849,0,146.849H0Z" transform="translate(5 -683.441)" fill="rgba(0,87,155,0.6)"/>
+        </g>
+        </svg>
+
+      </div>
+      <div class="landing-page-bottle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="439.056" height="397.113" viewBox="0 0 439.056 397.113">
+          <g id="Groupe_57" data-name="Groupe 57" transform="translate(-1349.944 -555)">
+            <g id="Groupe_52" class="bottle-parchment" data-name="Groupe 52" transform="matrix(0.966, 0.259, -0.259, 0.966, -1416.181, 902.63)">
+              <path id="Tracé_112" data-name="Tracé 112" d="M2241.258,155.518s-1.649-8.243.659-9.232c2.748-.22,21.651-1.868,22.42,0s3.407,9.891,1.649,11.21-17.584,6.924-17.584,6.924Z" transform="translate(482.507 -1093)" fill="#d7b37b"/>
+              <path id="Tracé_114" data-name="Tracé 114" d="M2241.421,853.925s-1.184,9.638.845,10.737,22.995,1.606,23.249.592,1.521-8.961,1.521-10.4-8.876-5.918-8.876-5.918Z" transform="translate(482.241 -1573.339)" fill="#d7b37b"/>
+              <path id="Tracé_113" data-name="Tracé 113" d="M2222.39,168.308c.88,3.9,5.795,53.844,6.036,114.691a907.936,907.936,0,0,1-6.036,108.9s17.256,1.6,19.234.616a11.854,11.854,0,0,1,1.209-4.946l1.429,4.946s14.177.659,15.716-2.418c-.33-4.286-9.781-61.628-9.231-109.16s9.122-110.7,9.122-110.7-9.891-3.517-14.947-2.857c-.989,3.187-2.2,7.473-2.2,7.473l-3.407-7.473S2227.444,166.382,2222.39,168.308Z" transform="translate(495 -1107.826)" fill="#c3a06a"/>
+              <path id="Tracé_115" data-name="Tracé 115" d="M2782.289-897.632s-18.423-1.323-25.921,2.646c.441,5,0,60.293,0,60.293h4.125l-2.827,2.195,1.47,1.583-2.768.792v25.106s1.071-2.262,1.3-.679-.678,1.809-.678,1.809.9.9.678,1.7-1.3.679-1.3.679v53.039h1.863l-.792,1.244,1.81.565-1.81,1.47.792,2.262-1.863-1.244v50.664s5.369,7.012,24.933,5.315C2774.862-837.314,2782.289-897.632,2782.289-897.632Z" transform="translate(-27.312 -34.86)" fill="#d7b37b"/>
+            </g>
+            <g id="Groupe_53" class="landing-page-bottle-btn" data-name="Groupe 53" transform="translate(3351.473 33.827) rotate(17)">
+              <path id="Tracé_8" data-name="Tracé 8" d="M-1551.406,1254.911v153.6s0,13.192-13.192,13.192a15.016,15.016,0,0,1-2.182-.147c-10.47-1.373-6.4-13.045-16.306-13.045a10.928,10.928,0,0,0-2.084.2h-.024c-8.166,1.667-6.792,13-19.028,13a17.03,17.03,0,0,1-3.09-.27c-10.152-1.888-10.765-12.922-18.023-12.922a6.827,6.827,0,0,0-2.379.417c-6.179,2.281-9.048,12.775-16.11,12.775a8.624,8.624,0,0,1-6.155-2.648,18.887,18.887,0,0,1-4.414-7.92V1257.976c0-47.521,5.272-58.09,21.137-63.387,13.879-4.61,11.525-23.466,10.74-28.027a1.1,1.1,0,0,1,.809-1.275c5.934-1.619,36.021-9.269,36.536.27.466,8.215-.147,14.835,5.787,22.339a42.452,42.452,0,0,0,6.841,6.694C-1559.327,1205.158-1551.406,1205.158-1551.406,1254.911Z" transform="translate(0 12.854)" fill="#a4d8f8" opacity="0.5"/>
+              <rect id="Rectangle_1" data-name="Rectangle 1" width="44.892" height="5.281" rx="0.239" transform="translate(-1625.345 1183.689)" fill="#3a4797"/>
+              <path id="Tracé_9" data-name="Tracé 9" d="M-1594.251,1181.047h-48.573a.8.8,0,0,1-.8-.8v-24.71a3.538,3.538,0,0,1,3.538-3.538h43.1a3.538,3.538,0,0,1,3.538,3.538v24.71A.8.8,0,0,1-1594.251,1181.047Z" transform="translate(15.639)" fill="#3a4797"/>
+              <path id="Tracé_10" data-name="Tracé 10" d="M-1628.695,1176.769c-6.2,1.854-14.355,5.515-18.484,13.2a23.321,23.321,0,0,0-2.641,10.563c-1.013,32.708,0,152.53,0,155.8v7.923c-.262,3.006-.659,4.046,0,5.282,1.282,2.4,5.483,3.524,7.923,2.641,5.853-2.121,5.49-17.214,5.281-23.768-2.177-68.077-3.594-111.183,2.641-147.878A241.8,241.8,0,0,1-1628.695,1176.769Z" transform="translate(5.989 35.967)" fill="#c0e1f2" opacity="0.5"/>
+              <path id="Tracé_11" data-name="Tracé 11" d="M-1641.6,1177.042s-1.415-26.936,0-21.578.772,21.578.772,21.578Z" transform="translate(17.669 4.005)" fill="#303e87"/>
+              <path id="Tracé_12" data-name="Tracé 12" d="M-1625.195,1177.034s-1.415-26.936,0-21.578.772,21.578.772,21.578Z" transform="translate(41.487 3.994)" fill="#303e87"/>
+              <path id="Tracé_13" data-name="Tracé 13" d="M-1627.271,1177.034s-2.244-26.936,0-21.578,1.229,21.578,1.229,21.578Z" transform="translate(37.938 3.994)" fill="#303e87"/>
+              <path id="Tracé_14" data-name="Tracé 14" d="M-1636.812,1177.034s2.119-26.936,0-21.578-1.157,21.578-1.157,21.578Z" transform="translate(23.537 3.994)" fill="#303e87"/>
+              <path id="Tracé_15" data-name="Tracé 15" d="M-1629.758,1177.034s1.415-26.936,0-21.578-.772,21.578-.772,21.578Z" transform="translate(34.442 3.994)" fill="#303e87"/>
+              <path id="Tracé_16" data-name="Tracé 16" d="M-1640.043,1177.076s-.5-23.442.8-22.285,0,22.285,0,22.285Z" transform="translate(20.702 3.993)" fill="#303e87"/>
+              <path id="Tracé_17" data-name="Tracé 17" d="M-1633.28,1177.066s-.6-23.442.964-22.282,0,22.282,0,22.282Z" transform="translate(30.495 3.982)" fill="#303e87"/>
+              <path id="Tracé_18" data-name="Tracé 18" d="M-1635.622,1177.066s-.6-23.442.951-22.282,0,22.282,0,22.282Z" transform="translate(27.095 3.982)" fill="#303e87"/>
+              <path id="Tracé_19" data-name="Tracé 19" d="M-1637.7,1153.184a3.08,3.08,0,0,0-3.053,1.023,5.309,5.309,0,0,0-.959,3.462,67.86,67.86,0,0,0-.1,7.9c.181,2.018,3.359,2.038,3.175,0a46.74,46.74,0,0,1,.037-5.373c.022-.9.039-1.8.068-2.7.012-.346.057-.662.094-1a.3.3,0,0,1,.1-.218C-1636.495,1156.419-1635.766,1153.557-1637.7,1153.184Z" transform="translate(18.127 1.618)" fill="#fff" opacity="0.58"/>
+              <path id="Tracé_20" data-name="Tracé 20" d="M-1619.04,1176.592c-8.166-.755-10.09.177-10.4,1.125-.537,1.631,3.818,2.95,7.31,9,1.621,2.8,1.758,4.384,3.936,6.466.966.922,3.612,3.45,5.9,2.81,3.46-.966,5.267-8.913,2.531-12.089-1.358-1.574-3.092-1.116-5.9-3.374A14.364,14.364,0,0,1-1619.04,1176.592Z" transform="translate(36.168 35.308)" fill="#c0e1f2" opacity="0.5"/>
+              <path id="Tracé_21" data-name="Tracé 21" d="M-1595.826,1238.9v153.6s0,13.192-13.192,13.192a15.016,15.016,0,0,1-2.182-.147s6.792-8.656,6.4-12.408c-.368-3.751-2.624-187.241-4.12-195.284-1.5-8.067-9.735-17.262-13.314-21.75a7.244,7.244,0,0,1-1.57-4.218,42.452,42.452,0,0,0,6.841,6.694C-1603.746,1189.144-1595.826,1189.144-1595.826,1238.9Z" transform="translate(44.42 28.869)" fill="#8bc5fb" opacity="0.5"/>
+              <path id="Tracé_22" data-name="Tracé 22" d="M-1613.076,1262.692c-8.166,1.667-6.792,13-19.028,13a17.03,17.03,0,0,1-3.09-.27c1.692-2.746,5.812-6.6,8.141-10.789C-1624.332,1259.749-1616.583,1261.564-1613.076,1262.692Z" transform="translate(27.88 158.869)" fill="#8bc5fb" opacity="0.5"/>
+              <path id="Tracé_23" data-name="Tracé 23" d="M-1630.329,1262.827c-6.179,2.281-9.048,12.775-16.11,12.775a8.624,8.624,0,0,1-6.155-2.648c2.452-3.7,11.23-8.729,13.879-10.667C-1636.361,1260.6-1632.487,1261.9-1630.329,1262.827Z" transform="translate(2.614 158.954)" fill="#8bc5fb" opacity="0.5"/>
+            </g>
+          </g>
+          <text id="Commencer_l_aventure" data-name="Commencer l&apos;aventure" transform="translate(154.056 24)" fill="#00335b" font-size="25" font-family="Montserrat-Light, Montserrat" font-weight="300"><tspan x="0" y="0">Commencer l&apos;aventure</tspan></text>
+          <path id="Tracé_24" data-name="Tracé 24" d="M1496,578.557s-20.042,8.685-16.7,40.753" transform="translate(-1349.944 -553)" fill="none" stroke="#00335b" stroke-width="1"/>
+          <path id="Tracé_25" data-name="Tracé 25" d="M1471.44,596.505s-.152,12.62,7.857,22.471" transform="translate(-1349.944 -553)" fill="none" stroke="#00335b" stroke-width="1"/>
+          <path id="Tracé_26" data-name="Tracé 26" d="M1489.986,600.938a42.909,42.909,0,0,0-11.023,18.372" transform="translate(-1349.944 -553)" fill="none" stroke="#00335b" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="landing-page-content">
+        <h1 class="landing-page-title">Bleu plastique</h1>
+      </div>
+      <div class="landing-page-sound">
+        <svg class="sound-on" xmlns="http://www.w3.org/2000/svg" width="76.666" height="76.666" viewBox="0 0 76.666 76.666">
+          <g id="SoundOn" transform="translate(-0.015)">
+            <path id="Tracé_101" data-name="Tracé 101" d="M38.333,0A38.333,38.333,0,1,1,0,38.333,38.333,38.333,0,0,1,38.333,0Z" transform="translate(0.015)" fill="#d7b37b"/>
+            <path id="Icon_metro-music" data-name="Icon metro-music" d="M38.915,1.928h2.423V29.792c0,3.345-3.8,6.057-8.48,6.057s-8.48-2.712-8.48-6.057,3.8-6.057,8.48-6.057a10.359,10.359,0,0,1,6.057,1.819V11.62L19.531,15.927V34.638c0,3.345-3.8,6.057-8.48,6.057s-8.48-2.712-8.48-6.057,3.8-6.057,8.48-6.057A10.359,10.359,0,0,1,17.108,30.4V6.774L38.915,1.928Z" transform="translate(13.232 16.832)"/>
+          </g>
+        </svg>
+        <svg class="sound-off hide" id="SoundOff" xmlns="http://www.w3.org/2000/svg" width="122" height="122" viewBox="0 0 122 122">
+          <g id="Pause" transform="translate(0 0)">
+            <circle id="Ellipse_2" data-name="Ellipse 2" cx="61" cy="61" r="61" fill="#d7b37b"/>
+            <path id="Icon_metro-music" data-name="Icon metro-music" d="M60.406,1.928h3.856V46.269c0,5.324-6.042,9.639-13.495,9.639s-13.495-4.316-13.495-9.639,6.042-9.639,13.495-9.639a16.484,16.484,0,0,1,9.639,2.894V17.351L29.561,24.205V53.98c0,5.324-6.042,9.639-13.495,9.639S2.571,59.3,2.571,53.98s6.042-9.639,13.495-9.639A16.484,16.484,0,0,1,25.7,47.235V9.639l34.7-7.711Z" transform="translate(22.568 27.925)"/>
+          </g>
+          <line id="Ligne_2" data-name="Ligne 2" x2="53.995" y2="59.994" transform="translate(34.997 30.997)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"/>
+        </svg>
+      </div>
+      <div class="landing-page-parchment hide">
+        <div class="landing-page-parchment-content">
+          <div>
+            <h1>Chère exploratrice, Cher explorateur, </h1>
+            <p>Si tu lis ce message c’est que tu as trouvé notre bouteille. Bleu plastique va te montrer le fléau qu’est le plastique et son impact terrible sur l’océan et ses habitants. Nous avons besoin de jeunes héros comme toi pour sauver nos amis. Savais-tu que chaque seconde 634 000 kilos de plastique sont jetés dans les océans !</p>
+            <p>Depuis que tu as ouvert notre bouteille le compteur est lancé !  Tu le retrouveras dès le début de ton exploration de l’océan. Car tu vas descendre mon ami(e) ! Tu vas rencontrer torty et palmeur, ils vont t’expliquer, situation et preuve à l’appui, les catastrophes liées au plastique.</p>
+            <p>Bleu plastique à besoin que tu deviennes le citoyen de demain pour aider nos océans ! Chaque action compte ne l’oublie pas !</p>
+
+            <p>Bon plongeon ! </p>
+            <h1 class="signature">Torty & Palmer</h1>
+            <p class="btn landing-page-btn">Continuer</p>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1443.045" height="807.325" viewBox="0 0 1443.045 807.325">
+          <path id="Tracé_94" data-name="Tracé 94" d="M2342.881,192.259h81.476l5.646,8.874,8.067-13.714,8.067,13.714,4.84-13.714,507.407,4.84,8.067,8.874v-8.874l8.874-4.84,8.067,4.84h17.142l16.134,8.874v-8.874h338.809l12.907,8.874,7.26-8.874h9.68l11.294,16.537h8.874l5.647-16.537h161.338s35.495,306.945-4.84,707.063H3432.112l-5.647-11.294-7.26,11.294-16.134-11.294-10.487,11.294H3033.608v-24.2l-11.294,24.2-10.487-11.294v11.294H2632.885l-11.294-18.957-5.37,16.954h-20.857l-5.866-38.456-8.473,40.459s-239.289-3.01-240.4-1.08-56.829-406.1,0-710.823C2344.221,188.5,2342.881,192.259,2342.881,192.259Z" transform="translate(-2221.074 -137.588)" fill="#d7b37b"/>
+          <path id="Tracé_96" data-name="Tracé 96" d="M2242.594,179.192s-5.508-27.538,2.2-30.843c9.18-.734,72.334-6.242,74.9,0s11.383,33.046,5.508,37.452-58.748,23.132-58.748,23.132Z" transform="translate(-2221.293 -145.404)" fill="#d7b37b"/>
+          <path id="Tracé_98" data-name="Tracé 98" d="M2325.284,179.192s5.508-27.538-2.2-30.843c-9.179-.734-72.334-6.242-74.9,0s-11.383,33.046-5.508,37.452,58.749,23.132,58.749,23.132Z" transform="translate(-903.539 -140.105)" fill="#d7b37b"/>
+          <path id="Tracé_97" data-name="Tracé 97" d="M2242.224,865.6s-3.954,32.2,2.824,35.87,76.825,5.367,77.672,1.977,5.084-29.939,5.084-34.741-29.656-19.771-29.656-19.771Z" transform="translate(-2221.27 -103.256)" fill="#d7b37b"/>
+          <path id="Tracé_100" data-name="Tracé 100" d="M2326.658,865.6s3.954,32.2-2.824,35.87-76.824,5.367-77.672,1.977-5.084-29.939-5.084-34.741,29.656-19.771,29.656-19.771Z" transform="translate(-904.568 -97.957)" fill="#d7b37b"/>
+          <path id="Tracé_95" data-name="Tracé 95" d="M2222.39,171.09c2.941,13.043,19.36,179.892,20.167,383.177s-20.167,363.817-20.167,363.817,57.651,5.361,64.26,2.057c.734-11.015,4.039-16.523,4.039-16.523l4.773,16.523s47.366,2.2,52.506-8.078c-1.1-14.32-32.679-205.895-30.843-364.7S2347.6,177.524,2347.6,177.524s-33.046-11.75-49.936-9.547c-3.3,10.648-7.344,24.968-7.344,24.968l-11.383-24.968S2239.276,164.655,2222.39,171.09Z" transform="translate(-2222.39 -144.103)" fill="#c3a06a"/>
+          <path id="Tracé_99" data-name="Tracé 99" d="M2347.968,171.09c-2.941,13.043-19.361,179.892-20.167,383.177s20.167,363.817,20.167,363.817-57.651,5.361-64.26,2.057c-.734-11.015-4.039-16.523-4.039-16.523L2274.9,920.14s-47.366,2.2-52.506-8.078c1.1-14.32,32.679-205.895,30.843-364.7s-30.476-369.839-30.476-369.839,33.046-11.75,49.936-9.547c3.3,10.648,7.344,24.968,7.344,24.968l11.383-24.968S2331.082,164.655,2347.968,171.09Z" transform="translate(-904.923 -138.804)" fill="#c3a06a"/>
+        </svg>
+
+      </div>
+    </div>
+    <div class="scrollIndication">
+      <div class="mouse">
+        <div class="scroller"></div>
+      </div>
+    </div>
+    <div class="subtitles hide">
+      <p>Dialogues</p>
+      <div class="btn subtitles-btn">Continuer</div>
+      <!--<button class="subtitles-button-show-hide">Show Hide</button>-->
+    </div>
+    <div id="container debug">
+      <section class="parallax">
+        <div class="background-1 reveal-bottom"></div>
+        <div class="background-2 reveal-bottom"></div>
+      </section>
+      <section class="module green">
+        <div class="module-up-down module-go-down" data-direction="down"></div>
+      </section>
+      <section class="module yellow">
+        <div class="morty-friend">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.24 360.5">
+            <defs>
+              <style>
+                .cls-30{fill:#32A196;}.cls-31{fill:#008E87;}.cls-32{fill:#fff;}.cls-33{fill:#5679a6;}
+              </style>
+            </defs>
+            <g id="Calque_2" data-name="Calque 2">
+              <g id="Calque_1-2" data-name="Calque 1">
+                <path class="cls-30" d="M121.67,218.89S-9.95,231.25.6,239.28s55.32,47.25,74.89,43.35c-5.52,25.1,6.88,69.94,11.05,77.51s56.92-105.19,56.69-113S121.67,218.89,121.67,218.89Z" />
+                <path class="cls-31" d="M442.38,47.48C442,49,438.11,58,428.88,73.81,420,89,406.19,110.62,385.74,138.05c-37,49.66-89.6,72.22-112.82,80.84h0c-3,1.09-5.41,2-7.32,2.63-11,3.88-47.4,8.15-81,16.74-15,3.84-29.47,8.53-40.91,14.42l0,0c-2.28,1.17-4.43,2.4-6.45,3.67C108,274.81,95.2,254,105.3,231.65a50.87,50.87,0,0,1,8.49-12.88c10.46-11.71,33.59-40.94,55.67-69.27h0c24.7-31.71,48.08-62.29,50.9-66l.28-.37s33.93-24,83.46-43.85c0,0,27.93-10.25,54.68-19.6,17.14-6,33.8-11.62,42.31-13.95C422.89-.22,430.22.24,439.63,0a16.37,16.37,0,0,1,5.86.8,3.65,3.65,0,0,1,2.36,2.87c.76,4.79,1.41,10.48.64,12.77-1,2.93,3.31-.87,6.13-3.57.13.44.25.89.37,1.35C457.28,23.17,443.18,44.5,442.38,47.48Z" />
+                <path class="cls-30" d="M442.38,47.48C442,49,438.11,58,428.88,73.81c-.32.18-.63.35-.95.5-20.18,9.63-41.73,15.13-62.37-3.67C348.4,55,355.34,29.53,358.16,21.4a3.76,3.76,0,0,1,2.3-2.29C377,13.34,392.86,8,401.1,5.75,422.89-.22,430.22.24,439.63,0a16.47,16.47,0,0,1,5.83.79,3.67,3.67,0,0,1,2.39,2.91c.77,4.79,1.41,10.45.64,12.74-1,2.93,3.31-.87,6.13-3.57.13.44.25.89.37,1.35C457.28,23.17,443.18,44.5,442.38,47.48Z" />
+                <ellipse class="cls-32" cx="408.19" cy="31.3" rx="12.88" ry="13.26" />
+                <ellipse class="cls-20" cx="408.19" cy="25" rx="5" ry="5"></ellipse>
+                <circle class="cls-32" cx="407.48" cy="28.94" r="1.64" />
+                <path class="cls-30" d="M169.47,149.49h0c-4.18,1-6.6,0-8-2.39s-3.44-5.73-12.5,1.15-7.57,0-7.57,0,4-13,39.79-40.25c23.36-17.82,34.35-23,39.16-24.49" />
+                <path class="cls-30" d="M184.56,238.26c1.77,2.26,9.42,3.29,11.63,2.82,2.9-.61,12.38-2.29,11-.61s.46,2.6,2.45,2.6,6.42,0-1.68,3.67-17.58,12.53,23.23-4c23.51-9.51,35.65-18.21,41.72-23.88h0" />
+                <path class="cls-30" d="M378.55,101s12.38-5.43,8.87,5.58c-6.57,8.56-24.31,32.86-26.45,36.84s-26.6,19.26-35.77,13.45C317.71,152,378.55,101,378.55,101Z" />
+                <circle class="cls-33" cx="158.08" cy="136.42" r="0.99" />
+                <circle class="cls-33" cx="162.6" cy="131.7" r="1.62" />
+                <circle class="cls-33" cx="163.06" cy="136.57" r="0.45" />
+                <circle class="cls-33" cx="167.88" cy="126.65" r="1.01" />
+                <circle class="cls-33" cx="168.72" cy="131.6" r="0.84" />
+                <circle class="cls-33" cx="172.33" cy="127.9" r="0.57" />
+                <circle class="cls-33" cx="172.62" cy="123.48" r="0.29" />
+                <circle class="cls-33" cx="175.96" cy="120.37" r="0.69" />
+                <circle class="cls-33" cx="176.2" cy="124.01" r="0.24" />
+                <circle class="cls-33" cx="173.32" cy="131.18" r="0.42" />
+                <circle class="cls-33" cx="167.74" cy="136" r="0.57" />
+                <circle class="cls-33" cx="179.86" cy="121.13" r="0.76" />
+                <circle class="cls-33" cx="177.52" cy="126.99" r="0.33" />
+                <circle class="cls-33" cx="180.35" cy="116.81" r="0.49" />
+                <circle class="cls-33" cx="184.43" cy="116.45" r="0.13" />
+                <circle class="cls-33" cx="185.02" cy="113.57" r="0.46" />
+                <circle class="cls-33" cx="334.21" cy="150.59" r="0.99" />
+                <circle class="cls-33" cx="338.36" cy="145.54" r="1.62" />
+                <circle class="cls-33" cx="339.19" cy="150.36" r="0.45" />
+                <circle class="cls-33" cx="343.24" cy="140.1" r="1.01" />
+                <circle class="cls-33" cx="344.45" cy="144.97" r="0.84" />
+                <circle class="cls-33" cx="347.77" cy="141" r="0.57" />
+                <circle class="cls-33" cx="347.72" cy="136.58" r="0.29" />
+                <circle class="cls-33" cx="350.81" cy="133.22" r="0.69" />
+                <circle class="cls-33" cx="351.33" cy="136.83" r="0.24" />
+                <circle class="cls-33" cx="349.01" cy="144.2" r="0.42" />
+                <circle class="cls-33" cx="343.81" cy="149.43" r="0.57" />
+                <circle class="cls-33" cx="354.76" cy="133.68" r="0.76" />
+                <circle class="cls-33" cx="352.87" cy="139.7" r="0.33" />
+                <circle class="cls-33" cx="354.92" cy="129.33" r="0.49" />
+                <circle class="cls-33" cx="358.96" cy="128.66" r="0.13" />
+                <circle class="cls-33" cx="359.33" cy="125.74" r="0.46" />
+                <circle class="cls-30" cx="233.32" cy="92.01" r="4.59" />
+                <circle class="cls-30" cx="248.88" cy="83.07" r="2.06" />
+                <circle class="cls-30" cx="249.11" cy="94.3" r="2.29" />
+                <circle class="cls-30" cx="238.56" cy="104.55" r="2.14" />
+                <circle class="cls-30" cx="223.88" cy="105.92" r="3.52" />
+                <circle class="cls-30" cx="232.83" cy="116.85" r="2.83" />
+                <circle class="cls-30" cx="251.32" cy="106.99" r="2.45" />
+                <circle class="cls-30" cx="263.17" cy="88.5" r="1.07" />
+                <circle class="cls-30" cx="261.57" cy="76.19" r="1.61" />
+                <circle class="cls-30" cx="271.48" cy="82.44" r="1.43" />
+                <circle class="cls-30" cx="261.03" cy="99.2" r="1.07" />
+                <path class="cls-30" d="M246.81,118.55v0Z" />
+                <circle class="cls-30" cx="222.12" cy="119.17" r="1.76" />
+                <circle class="cls-30" cx="210" cy="122.69" r="0.79" />
+                <circle class="cls-30" cx="226.16" cy="130.17" r="2.27" />
+                <circle class="cls-30" cx="211.46" cy="133.86" r="2.25" />
+                <circle class="cls-30" cx="248.49" cy="120.22" r="1.67" />
+                <circle class="cls-30" cx="280.01" cy="68.7" r="1.45" />
+                <circle class="cls-30" cx="275.06" cy="91.82" r="0.73" />
+                <circle class="cls-30" cx="296.99" cy="62.7" r="1.57" />
+                <circle class="cls-30" cx="283.23" cy="76.36" r="1.77" />
+                <circle class="cls-30" cx="288.68" cy="64.36" r="1.66" />
+                <circle class="cls-30" cx="270.55" cy="70.65" r="0.5" />
+                <circle class="cls-30" cx="294.7" cy="71.57" r="1.41" />
+                <circle class="cls-30" cx="300.97" cy="55.97" r="0.8" />
+                <circle class="cls-30" cx="239.32" cy="127.06" r="1.41" />
+                <circle class="cls-30" cx="197.82" cy="137.18" r="1.76" />
+                <circle class="cls-30" cx="197.82" cy="148.65" r="1.76" />
+                <circle class="cls-30" cx="187.14" cy="149.36" r="0.71" />
+                <circle class="cls-30" cx="185.29" cy="159.5" r="2.06" />
+                <circle class="cls-30" cx="207.83" cy="143.07" r="0.76" />
+                <circle class="cls-30" cx="200.62" cy="157.11" r="1.05" />
+                <circle class="cls-30" cx="221.82" cy="142.38" r="1.45" />
+                <circle class="cls-30" cx="211.89" cy="151.5" r="1.09" />
+                <circle class="cls-30" cx="173.41" cy="168.45" r="1.08" />
+                <circle class="cls-30" cx="192.47" cy="165.31" r="1.45" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="morty-container">
+          <img src="/images/mortyOpen.png" class="morty-open opacity-0" alt="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.24 360.5">
+            <defs>
+              <style>
+                .cls-20{fill:#263f73;}.cls-21{fill:#222059;}.cls-22{fill:#fff;}.cls-23{fill:#5679a6;}
+              </style>
+            </defs>
+            <g id="Calque_2" data-name="Calque 2">
+              <g id="Calque_1-2" data-name="Calque 1">
+                <path class="cls-20" d="M121.67,218.89S-9.95,231.25.6,239.28s55.32,47.25,74.89,43.35c-5.52,25.1,6.88,69.94,11.05,77.51s56.92-105.19,56.69-113S121.67,218.89,121.67,218.89Z" />
+                <path class="cls-21" d="M442.38,47.48C442,49,438.11,58,428.88,73.81,420,89,406.19,110.62,385.74,138.05c-37,49.66-89.6,72.22-112.82,80.84h0c-3,1.09-5.41,2-7.32,2.63-11,3.88-47.4,8.15-81,16.74-15,3.84-29.47,8.53-40.91,14.42l0,0c-2.28,1.17-4.43,2.4-6.45,3.67C108,274.81,95.2,254,105.3,231.65a50.87,50.87,0,0,1,8.49-12.88c10.46-11.71,33.59-40.94,55.67-69.27h0c24.7-31.71,48.08-62.29,50.9-66l.28-.37s33.93-24,83.46-43.85c0,0,27.93-10.25,54.68-19.6,17.14-6,33.8-11.62,42.31-13.95C422.89-.22,430.22.24,439.63,0a16.37,16.37,0,0,1,5.86.8,3.65,3.65,0,0,1,2.36,2.87c.76,4.79,1.41,10.48.64,12.77-1,2.93,3.31-.87,6.13-3.57.13.44.25.89.37,1.35C457.28,23.17,443.18,44.5,442.38,47.48Z" />
+                <path class="cls-20" d="M442.38,47.48C442,49,438.11,58,428.88,73.81c-.32.18-.63.35-.95.5-20.18,9.63-41.73,15.13-62.37-3.67C348.4,55,355.34,29.53,358.16,21.4a3.76,3.76,0,0,1,2.3-2.29C377,13.34,392.86,8,401.1,5.75,422.89-.22,430.22.24,439.63,0a16.47,16.47,0,0,1,5.83.79,3.67,3.67,0,0,1,2.39,2.91c.77,4.79,1.41,10.45.64,12.74-1,2.93,3.31-.87,6.13-3.57.13.44.25.89.37,1.35C457.28,23.17,443.18,44.5,442.38,47.48Z" />
+                <ellipse class="cls-22" cx="408.19" cy="31.3" rx="12.88" ry="13.26" />
+                <circle class="cls-22" cx="407.48" cy="28.94" r="1.64" />
+                <path class="cls-20" d="M169.47,149.49h0c-4.18,1-6.6,0-8-2.39s-3.44-5.73-12.5,1.15-7.57,0-7.57,0,4-13,39.79-40.25c23.36-17.82,34.35-23,39.16-24.49" />
+                <path class="cls-20" d="M184.56,238.26c1.77,2.26,9.42,3.29,11.63,2.82,2.9-.61,12.38-2.29,11-.61s.46,2.6,2.45,2.6,6.42,0-1.68,3.67-17.58,12.53,23.23-4c23.51-9.51,35.65-18.21,41.72-23.88h0" />
+                <path class="cls-20" d="M378.55,101s12.38-5.43,8.87,5.58c-6.57,8.56-24.31,32.86-26.45,36.84s-26.6,19.26-35.77,13.45C317.71,152,378.55,101,378.55,101Z" />
+                <circle class="cls-23" cx="158.08" cy="136.42" r="0.99" />
+                <circle class="cls-23" cx="162.6" cy="131.7" r="1.62" />
+                <circle class="cls-23" cx="163.06" cy="136.57" r="0.45" />
+                <circle class="cls-23" cx="167.88" cy="126.65" r="1.01" />
+                <circle class="cls-23" cx="168.72" cy="131.6" r="0.84" />
+                <circle class="cls-23" cx="172.33" cy="127.9" r="0.57" />
+                <circle class="cls-23" cx="172.62" cy="123.48" r="0.29" />
+                <circle class="cls-23" cx="175.96" cy="120.37" r="0.69" />
+                <circle class="cls-23" cx="176.2" cy="124.01" r="0.24" />
+                <circle class="cls-23" cx="173.32" cy="131.18" r="0.42" />
+                <circle class="cls-23" cx="167.74" cy="136" r="0.57" />
+                <circle class="cls-23" cx="179.86" cy="121.13" r="0.76" />
+                <circle class="cls-23" cx="177.52" cy="126.99" r="0.33" />
+                <circle class="cls-23" cx="180.35" cy="116.81" r="0.49" />
+                <circle class="cls-23" cx="184.43" cy="116.45" r="0.13" />
+                <circle class="cls-23" cx="185.02" cy="113.57" r="0.46" />
+                <circle class="cls-23" cx="334.21" cy="150.59" r="0.99" />
+                <circle class="cls-23" cx="338.36" cy="145.54" r="1.62" />
+                <circle class="cls-23" cx="339.19" cy="150.36" r="0.45" />
+                <circle class="cls-23" cx="343.24" cy="140.1" r="1.01" />
+                <circle class="cls-23" cx="344.45" cy="144.97" r="0.84" />
+                <circle class="cls-23" cx="347.77" cy="141" r="0.57" />
+                <circle class="cls-23" cx="347.72" cy="136.58" r="0.29" />
+                <circle class="cls-23" cx="350.81" cy="133.22" r="0.69" />
+                <circle class="cls-23" cx="351.33" cy="136.83" r="0.24" />
+                <circle class="cls-23" cx="349.01" cy="144.2" r="0.42" />
+                <circle class="cls-23" cx="343.81" cy="149.43" r="0.57" />
+                <circle class="cls-23" cx="354.76" cy="133.68" r="0.76" />
+                <circle class="cls-23" cx="352.87" cy="139.7" r="0.33" />
+                <circle class="cls-23" cx="354.92" cy="129.33" r="0.49" />
+                <circle class="cls-23" cx="358.96" cy="128.66" r="0.13" />
+                <circle class="cls-23" cx="359.33" cy="125.74" r="0.46" />
+                <rect x="400.16" y="29.17" width="16.05" height="4.27" rx="2.13" />
+                <rect x="400.16" y="29.17" width="16.05" height="4.27" rx="2.13" transform="translate(439.49 -376.88) rotate(90)" />
+                <circle class="cls-20" cx="233.32" cy="92.01" r="4.59" />
+                <circle class="cls-20" cx="248.88" cy="83.07" r="2.06" />
+                <circle class="cls-20" cx="249.11" cy="94.3" r="2.29" />
+                <circle class="cls-20" cx="238.56" cy="104.55" r="2.14" />
+                <circle class="cls-20" cx="223.88" cy="105.92" r="3.52" />
+                <circle class="cls-20" cx="232.83" cy="116.85" r="2.83" />
+                <circle class="cls-20" cx="251.32" cy="106.99" r="2.45" />
+                <circle class="cls-20" cx="263.17" cy="88.5" r="1.07" />
+                <circle class="cls-20" cx="261.57" cy="76.19" r="1.61" />
+                <circle class="cls-20" cx="271.48" cy="82.44" r="1.43" />
+                <circle class="cls-20" cx="261.03" cy="99.2" r="1.07" />
+                <path class="cls-20" d="M246.81,118.55v0Z" />
+                <circle class="cls-20" cx="222.12" cy="119.17" r="1.76" />
+                <circle class="cls-20" cx="210" cy="122.69" r="0.79" />
+                <circle class="cls-20" cx="226.16" cy="130.17" r="2.27" />
+                <circle class="cls-20" cx="211.46" cy="133.86" r="2.25" />
+                <circle class="cls-20" cx="248.49" cy="120.22" r="1.67" />
+                <circle class="cls-20" cx="280.01" cy="68.7" r="1.45" />
+                <circle class="cls-20" cx="275.06" cy="91.82" r="0.73" />
+                <circle class="cls-20" cx="296.99" cy="62.7" r="1.57" />
+                <circle class="cls-20" cx="283.23" cy="76.36" r="1.77" />
+                <circle class="cls-20" cx="288.68" cy="64.36" r="1.66" />
+                <circle class="cls-20" cx="270.55" cy="70.65" r="0.5" />
+                <circle class="cls-20" cx="294.7" cy="71.57" r="1.41" />
+                <circle class="cls-20" cx="300.97" cy="55.97" r="0.8" />
+                <circle class="cls-20" cx="239.32" cy="127.06" r="1.41" />
+                <circle class="cls-20" cx="197.82" cy="137.18" r="1.76" />
+                <circle class="cls-20" cx="197.82" cy="148.65" r="1.76" />
+                <circle class="cls-20" cx="187.14" cy="149.36" r="0.71" />
+                <circle class="cls-20" cx="185.29" cy="159.5" r="2.06" />
+                <circle class="cls-20" cx="207.83" cy="143.07" r="0.76" />
+                <circle class="cls-20" cx="200.62" cy="157.11" r="1.05" />
+                <circle class="cls-20" cx="221.82" cy="142.38" r="1.45" />
+                <circle class="cls-20" cx="211.89" cy="151.5" r="1.09" />
+                <circle class="cls-20" cx="173.41" cy="168.45" r="1.08" />
+                <circle class="cls-20" cx="192.47" cy="165.31" r="1.45" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <ul class="debug">
+          <li>
+            <a href="/pages/datatest.html">data Tests</a>
+          </li>
+          <li>
+            <a href="/pages/turtlev1.html">Turtle v1</a>
+          </li>
+          <li>
+            <a href="/pages/turtlev2.html">Turtle v2</a>
+          </li> 
+          <li>
+            <a href="/pages/datamap.html">data map</a>
+          </li>
+        </ul>      
+      </section>
+      <section class="module purple">
+        <div id="chart"></div>
+        <!--<div class="animated-element parallax"></div>-->
+      </section>
+      <section class="module debug">
+        <div class="module-up-down module-go-up" data-direction="up"></div>
+      </section>
+      <section class="module orange"></section>
+      <section class="module debug">
+        <div class="module-up-down module-go-up" data-direction="up"></div>
+      </section>
+      <section class="module blue"></section>
+      <section class="module debug">
+        <div class="module-up-down module-go-down" data-direction="down"></div>
+      </section>
+      <section class="module ending-page">
+        <div class="ending-page-container">
+          <div class="ending-page-content">
+            <h1>Fin</h1>
+            <p>Depuis que tu es sur le site, <span class="ending-page-counter"></span> tonnes de plastique ont été jetées dans les océans !</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="turtle-container">
+      <svg class="svg-turtle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 892.5 562.5">
+        <defs>
+          <style>.cls-1{fill:#89cee8;}.cls-2{fill:#fff;}.cls-3{fill:#1E1E3A;}.cls-4{fill:#222059;}.cls-5{fill:#263f73;}.cls-6{fill:#a65398;}.cls-7{fill:#d97398;}</style>
+        </defs>
+        
+        <g id="Calque_2" class="turtle" data-name="Calque 2">
+
+          <!--<g id="Bulle3">
+            <circle class="cls-1" cx="834.5" cy="129" r="18"/><path class="cls-2" d="M843.88,128.19c-2,2.62-2.13-1.64-4.76-3.66s-6.78-1-4.76-3.65a6,6,0,1,1,9.52,7.31Z"/>
+          </g>
+
+          <g id="Bulle2"><circle class="cls-1" cx="881" cy="76.5" r="11.5"/></g>
+
+          <g id="Bulle1">
+            <circle class="cls-1" cx="827" cy="19.5" r="19.5"/><path class="cls-2" d="M840.53,20.66c-2.32,3-3.52-2.7-7.86-6s-10.17-3-7.85-6,7.72-2.77,12,.56S842.85,17.64,840.53,20.66Z"/>
+          </g>-->
+
+          <g id="Pate3" class="turtle-paw3">
+            <path class="cls-3" d="M143,406.56s6,20.94-7,62.94S113.74,529,113.74,529s56-15.37,79.13-39.44S258,427.5,270,390.5s10-55,10-55l-97-14Z"/>
+          </g>
+
+          <g id="Pate1" class="turtle-paw1">
+            <path class="cls-3" d="M502,418.5s-15,92,12,138c54-22,115-100,121-192s-11-107-11-107-84.5,20-94.75,64S502,418.5,502,418.5Z"/>
+          </g>
+
+          <g id="Corps" class="turtle-body">
+            <path class="cls-4" d="M734,123.5c-28-14-98-32-116,44s-516,93-516,93,13,50,48,70,94,48,179,42,182-30,230-46,75-48,75-48,35,18,65,14c13.75-1.83,34.63-9.34,53.71-20.68-6-2.19-13.64-8.15-19.71-23.32,9.9,10.56,22.41,15,29.78,16.83C781,252.64,795.7,236.41,798,218.5,803,179.5,762,137.5,734,123.5Zm49,102c-4,0-4-2,0-2.38S787,225.5,783,225.5Z"/>
+            <circle class="cls-5" cx="617" cy="190.5" r="2.5"/>
+            <circle class="cls-5" cx="621.5" cy="180" r="2"/>
+            <circle class="cls-5" cx="629.5" cy="164" r="3"/>
+            <circle class="cls-5" cx="636" cy="180.5" r="2.5"/>
+            <ellipse class="cls-5" cx="631.5" cy="191.5" rx="4" ry="4.5"/>
+            <circle class="cls-5" cx="616.5" cy="206" r="2"/>
+            <circle class="cls-5" cx="639" cy="142.5" r="2.5"/>
+            <circle class="cls-5" cx="716.5" cy="122" r="2"/>
+            <circle class="cls-5" cx="732.5" cy="129" r="3"/>
+            <circle class="cls-5" cx="734" cy="141.5" r="1.5"/
+            ><circle class="cls-5" cx="746.5" cy="140" r="2"/>
+            <circle class="cls-5" cx="747" cy="154.5" r="2.5"/>
+            <circle class="cls-5" cx="758" cy="147.5" r="2.5"/>
+            <path d="M783,225.5c-4,0-4-2,0-2.38S787,225.5,783,225.5Z"/>
+          </g>
+
+          <g id="Oeuil" >
+            <path class="cls-5" d="M735.2,186.49A34.48,34.48,0,0,1,724,206c-.59.52-1.2,1-1.82,1.48a33.39,33.39,0,0,1-4,2.65c-14,6.07-32.91,1.11-46.92-12.92-1-.94-1.87-1.93-2.77-3-16.72-19.13-18.3-45.09-3.54-58s40.29-7.85,57,11.28a57.14,57.14,0,0,1,10.45,17.22A44.93,44.93,0,0,1,735.2,186.49Z"/>
+            <g class="turtle-eye">
+              <path class="cls-2" d="M735.2,186.49A34.48,34.48,0,0,1,724,206c-.59.52-1.2,1-1.82,1.48a33.39,33.39,0,0,1-4,2.65,34.28,34.28,0,0,1-14.8,4.36l-.69,0a34.61,34.61,0,1,1,28.94-51.26c.27.49.53,1,.77,1.49A34.53,34.53,0,0,1,735.2,186.49Z"/>
+              <path d="M724.94,206.75c-.61.48-1.24.93-1.88,1.36a38.28,38.28,0,0,1-19.4,6.39l-.71,0c-10-4.48-14.12-18-9.25-31.61,5.26-14.65,19-23.87,30.64-20.59a17,17,0,0,1,8.41,5.42C740.66,180.48,737.8,196.8,724.94,206.75Z"/>
+              <path class="cls-2" d="M725.14,202.68a12.14,12.14,0,0,1-1,4.81,34.4,34.4,0,0,1-18.84,7,13,13,0,0,1-8.17-11.82c0-7.18,6.27-13,14-13S725.14,195.5,725.14,202.68Z"/>
+              <path class="cls-2" d="M722.6,173.86c-.3,2.46-2.21.69-5.58.28s-6.9.71-6.6-1.76,3.27-4.13,6.63-3.72S722.9,171.39,722.6,173.86Z"/>
+            </g>
+          </g>
+
+          <g id="Pate2" class="turtle-paw2">
+            <path class="cls-4" d="M502,318.5s-14.58-10.68-51.79,48.16S401,529.5,406,562.5c39-8,115-95,140-151s37.94-98.19,33.47-113.59S502,318.5,502,318.5Z"/>
+            <circle class="cls-5" cx="548.5" cy="367" r="5"/>
+            <circle class="cls-5" cx="533" cy="352.5" r="3.5"/>
+            <circle class="cls-5" cx="535" cy="381.5" r="3.5"/>
+            <circle class="cls-5" cx="535" cy="402.5" r="4.5"/><circle class="cls-5" cx="483" cy="479.5" r="2.5"/><circle class="cls-5" cx="492" cy="462.5" r="2.5"/><ellipse class="cls-5" cx="505.5" cy="458" rx="3" ry="4"/><circle class="cls-5" cx="504" cy="443.5" r="4.5"/><circle class="cls-5" cx="520" cy="439.5" r="3.5"/><circle class="cls-5" cx="512.5" cy="424" r="4"/><circle class="cls-5" cx="527" cy="420.5" r="3.5"/><circle class="cls-5" cx="517.5" cy="408" r="1"/><circle class="cls-5" cx="523" cy="392.5" r="3.5"/><circle class="cls-5" cx="547.5" cy="388" r="2"/><circle class="cls-5" cx="526" cy="368.5" r="3.5"/><circle class="cls-5" cx="561" cy="349.5" r="3.5"/><circle class="cls-5" cx="563" cy="329.5" r="5.5"/><circle class="cls-5" cx="540" cy="334.5" r="6.5"/>
+          </g>
+
+          <g id="Pate4" class="turtle-paw4">
+            <path class="cls-4" d="M131.06,297.91S93,323.5,75,365.5s-15,73-56,124c36,2,133.48-40.59,164.24-95.8S208,325.5,208,325.5Z"/><circle class="cls-5" cx="164.65" cy="396.19" r="5"/><circle class="cls-5" cx="160.15" cy="380.68" r="3.5"/><circle class="cls-5" cx="143.15" cy="404.69" r="3.5"/><circle class="cls-5" cx="142.15" cy="421.69" r="4.5"/><circle class="cls-5" cx="57.68" cy="471.77" r="2.5"/><circle class="cls-5" cx="72.33" cy="459.29" r="2.5"/><ellipse class="cls-5" cx="86.53" cy="460.1" rx="4" ry="3" transform="translate(-373 370.62) rotate(-68.33)"/><circle class="cls-5" cx="90.49" cy="446.07" r="4.5"/><circle class="cls-5" cx="106.84" cy="448.26" r="3.5"/><circle class="cls-5" cx="105.59" cy="431.08" r="4"/><circle class="cls-5" cx="120.36" cy="433.19" r="3.5"/><circle class="cls-5" cx="116.15" cy="418.06" r="1"/><circle class="cls-5" cx="129.14" cy="416.69" r="3.5"/><circle class="cls-5" cx="155.65" cy="413.19" r="2"/><circle class="cls-5" cx="143.15" cy="387.69" r="3.5"/><circle class="cls-5" cx="178.18" cy="379.76" r="3.5"/><circle class="cls-5" cx="187.42" cy="361.91" r="5.5"/><circle class="cls-5" cx="164.2" cy="358.06" r="6.5"/>
+          </g>
+
+          <g id="Queue" class="turtle-tail">
+            <path class="cls-4" d="M134,218.5s-27,32-56,44-78,22-78,22,30,27,81,24,62-19,62-19Z"/><circle class="cls-5" cx="30.5" cy="286" r="1"/><circle class="cls-5" cx="42.5" cy="281" r="2"/><circle class="cls-5" cx="59.5" cy="278" r="3"/><circle class="cls-5" cx="54.5" cy="287" r="1"/><circle class="cls-5" cx="82.5" cy="272" r="3"/><circle class="cls-5" cx="75.5" cy="281" r="2"/><circle class="cls-5" cx="98" cy="265.5" r="3.5"/><circle class="cls-5" cx="94.5" cy="277" r="2"/><circle class="cls-5" cx="89.5" cy="285" r="2"/><circle class="cls-5" cx="70" cy="271.5" r="1.5"/><circle class="cls-5" cx="112.5" cy="270" r="4"/><circle class="cls-5" cx="107.5" cy="281" r="2"/><circle class="cls-5" cx="105.5" cy="257" r="2"/>
+          </g>
+
+          <g id="Carapace">
+            <path class="cls-3" d="M109.5,247.94s11.76,76.53,222.38,53.79S601.14,222.18,607,195.09,109.5,247.94,109.5,247.94Z"/>
+            <path class="cls-6" d="M529,254.5c-35,19-219,58-314.12,43.41S102,242.16,102,242.16c6.63-2.74,16.64-14.27,31.05-30.15,7.48-8.25,16.15-17.66,26.15-27.63,5.31-5.29,11-10.73,17.07-16.24a396,396,0,0,1,59.22-44.66A346.4,346.4,0,0,1,325.73,84.4,359.33,359.33,0,0,1,376,74.5a161,161,0,0,1,18.52-1.23c31.72-.27,60.58,8.93,86.39,21.92q5.08,2.55,10,5.29a394.74,394.74,0,0,1,39.29,25.32c11.46,8.25,22,16.47,31.64,23.78,18,13.66,32.78,24.17,44.15,25.92C616,220.5,564,235.5,529,254.5Z"/>
+            <path class="cls-7" d="M271,169.5s-21-15-35-5-19,30-33,41-19.14,28.33-6.07,36.66S239,265.5,257,255.5s20-27,35-42S305,182.5,271,169.5Z"/>
+            <path class="cls-7" d="M252,140.5c0,12-27,11-40,32s-22,22-32,14.68c-6.59-4.84-5.35-13.64-3.76-19a396,396,0,0,1,59.22-44.66C243.35,125.42,252,131.94,252,140.5Z"/>
+            <path class="cls-7" d="M363.47,187.18C380,188.5,385.8,194.5,386.4,218.5s-8.4,34-36.4,34-75,7-53-14,11-34,30-41A258,258,0,0,1,363.47,187.18Z"/>
+            <path class="cls-7" d="M446,193.5c18,3,32-6,37,4s-4,36-21,40-63.1,10.13-59.55-22.44,12.73-36.2,26.14-27.88S446,193.5,446,193.5Z"/>
+            <path class="cls-7" d="M561.85,149.58A36.59,36.59,0,0,1,556,164.5c-9,13-28,39-51,31s9-56,9-56,3-2,10-11c1.33-1.71,3.53-2.52,6.21-2.7C541.67,134.05,552.22,142.27,561.85,149.58Z"/>
+            <path class="cls-7" d="M354.63,122.87C373,133.5,391,130.5,395,146.5s16,21-4,27-48.62,15-79.81,0-59.2-26.27-47.7-50.63S302,97.5,317,99.5,354.63,122.87,354.63,122.87Z"/>
+            <path class="cls-7" d="M427.67,101.5c-1.33,10-23.67,15-41.24,15.68S366,108.5,352,101.5c0,0-3,1-17-5-7.2-3.09-9.11-8-9.27-12.1A359.33,359.33,0,0,1,376,74.5a161,161,0,0,1,18.52-1.23A69.24,69.24,0,0,0,413,80.5C430,84.5,429,91.5,427.67,101.5Z"/>
+            <path class="cls-7" d="M178,226.5c-9,10-23.47,4.92-31.91-6.1-2.4-3.14-8.61-6.37-13-8.39,7.48-8.25,16.15-17.66,26.15-27.63A40.93,40.93,0,0,0,175,201.57C190,210.63,187,216.5,178,226.5Z"/>
+            <path class="cls-7" d="M484.38,169.92C478.75,187.35,451,182.5,424,166.5s-10-40,4.33-52.07c0,0,12.67-10.93,24.11-15.61,8.4-3.43,18.81-6.32,28.47-3.63q5.08,2.55,10,5.29c11.91,10,9.08,16,10.08,31S490,152.5,484.38,169.92Z"/>
+            <path class="cls-7" d="M132.67,224.6a10.61,10.61,0,0,0-4.5-.63,3.64,3.64,0,0,0-1.45.35,4.44,4.44,0,0,0-1.43,1.46Q119,234.56,112,242.7a4.52,4.52,0,0,0-.88,1.3,3,3,0,0,0,.87,3,8.22,8.22,0,0,0,2.86,1.6q2.86,1.11,5.82,2a9.41,9.41,0,0,0,3.18.58c2.81-.12,5-2.48,6.54-4.82a41.33,41.33,0,0,0,6.16-14.71,7.91,7.91,0,0,0,.16-3.35,3.08,3.08,0,0,0-2.16-2.38Z"/>
+            <path class="cls-7" d="M151.63,233.19c-1.72,0-3.49-.33-5.15.15a8.64,8.64,0,0,0-4.88,4.57c-1.07,2-1.71,4.25-2.75,6.29-1.64,3.22-4.23,5.88-5.88,9.1s-2.11,7.52.35,10.17c1.85,2,4.8,2.48,7.52,2.51a4.24,4.24,0,0,0,2.21-.4,7.38,7.38,0,0,0,1.22-1.09c1.63-1.59,4-2.22,5.75-3.64,2.51-2,3.59-5.34,3.92-8.55s.07-6.46.54-9.65c.29-2,.85-3.93.51-5.89s-2-3.88-3.94-3.67Z"/>
+            <path class="cls-7" d="M166.36,244.27c-4.8,6.08-4.67,14.73-8.29,21.58a23.1,23.1,0,0,0-1.95,4,7.83,7.83,0,0,0,6.59,9.63c3,.23,5.81-1.33,8.36-2.9a7.42,7.42,0,0,0,1.9-1.48c1.18-1.39,1.24-3.38,1.33-5.2a53,53,0,0,1,2.86-14.58c.46-1.33,1-2.84.29-4.07a4.6,4.6,0,0,0-1.61-1.52,52,52,0,0,0-9.17-4.8Z"/>
+            <path class="cls-7" d="M204.2,259.14A25.24,25.24,0,0,1,190.36,256a5.37,5.37,0,0,0-2.78-1c-1.72.08-2.79,1.84-3.5,3.4a74.29,74.29,0,0,0-6,21.46c-.25,2.1-.26,4.58,1.41,5.87a6.1,6.1,0,0,0,2.39.95,150,150,0,0,0,15.44,2.92,2,2,0,0,0,1.4-.17,1.91,1.91,0,0,0,.58-1.28c1.47-9.07.24-19.1,5.36-26.73Z"/>
+            <path class="cls-7" d="M227.62,264.57c-1.44-1.83-4-2.15-6.36-2.33l-8.74-.66a4.31,4.31,0,0,0-1.79.11c-1.66.57-2,2.72-2.09,4.47l-.79,17.62a9,9,0,0,0,.23,3.15,6.65,6.65,0,0,0,1.23,2.12,11,11,0,0,0,9.53,4.05,9.14,9.14,0,0,0,7.73-6.58,32,32,0,0,0,.47-3.92c.34-3,1.45-5.78,1.76-8.74s-.41-6.32-2.87-8Z"/>
+            <path class="cls-7" d="M249.82,269.35l-11.94-4.06a1.54,1.54,0,0,0-1.29,0,1.48,1.48,0,0,0-.46,1.19,215.1,215.1,0,0,0-.37,22,3.06,3.06,0,0,0,.21,1.16,3.31,3.31,0,0,0,1.14,1.12c1.89,1.42,3.29,3.41,5.14,4.89s4.49,2.4,6.56,1.27a5.66,5.66,0,0,0,2.59-4.3,27.44,27.44,0,0,0-.13-5.2,29.77,29.77,0,0,1,.51-7.77c.41-2.11,1.06-4.25.65-6.36s-2.33-4.13-4.44-3.72Z"/>
+            <path class="cls-7" d="M273.62,268.14q-6.5-.24-13-.11a2.9,2.9,0,0,0-1.14.18c-1.08.51-1.05,2.05-.84,3.23a91.61,91.61,0,0,0,4.72,16.49,12.09,12.09,0,0,0,2.11,3.82c2.64,2.91,7.17,2.81,11.09,2.48a2.8,2.8,0,0,0,1.29-.32,2.13,2.13,0,0,0,.72-.88,9.21,9.21,0,0,0,.59-4.18l-.27-15a7.77,7.77,0,0,0-.52-3.22c-.85-1.79-2.88-2.64-4.74-3.33Z"/>
+            <path class="cls-7" d="M299.56,267.62c-2,.81-4.19.4-6.31.28s-4.55.21-5.77,2c-.94,1.32-.89,3.08-.8,4.7l.64,11.83c.14,2.67.42,5.64,2.4,7.44a7,7,0,0,0,5.2,1.55,20.65,20.65,0,0,0,5.39-1.38c2.1-.75,4.35-1.61,5.54-3.49a7.07,7.07,0,0,0,.63-5.38,35.12,35.12,0,0,0-1.94-5.21,34.68,34.68,0,0,1-1.94-6.6c-.43-2.28-.67-4.7-2-6.61Z"/>
+            <path class="cls-7" d="M324.69,263.66q-5.31.24-10.59.83a4,4,0,0,0-2.13.68,3.51,3.51,0,0,0-1,2.41c-.38,3.71.81,7.39,2,10.93l2.74,8.28a7.46,7.46,0,0,0,1.05,2.27,6.1,6.1,0,0,0,3.52,1.91,16.08,16.08,0,0,0,10.82-1.32,3.2,3.2,0,0,0,1.41-1.13,3.54,3.54,0,0,0,.13-2.51,84.28,84.28,0,0,0-8-22.59Z"/>
+            <path class="cls-7" d="M356.77,261.3q-7.81-.07-15.63,0a4.45,4.45,0,0,0-1.89.3c-1.77.83-1.72,3.32-1.4,5.25a45.22,45.22,0,0,0,2.95,11.4c1.63,3.59,4.37,6.84,8.06,8.22,2.88,1.08,6.05.95,9.12.8,1.15-.06,2.48-.2,3.13-1.16a3.55,3.55,0,0,0,.47-1.56,28.66,28.66,0,0,0-2.44-15.65c-1-2.18-2.35-4.33-2.54-6.73Z"/>
+            <path class="cls-7" d="M574,168.75l-6,10.14a3,3,0,0,0-.61,2.09c.26,1.14,1.62,1.54,2.72,1.92,2.55.91,4.62,2.78,6.82,4.34a33.16,33.16,0,0,0,15,5.81c2,.24,4.2.22,5.63-1.15a6.62,6.62,0,0,0,1.62-3.41,29.54,29.54,0,0,0,.63-9.65,2.28,2.28,0,0,0-.36-1.2,2.45,2.45,0,0,0-1.29-.73L574,169.32Z"/>
+            <path class="cls-7" d="M562.61,189.31l-9.42,4.4c-1.86.86-4,2.11-4.08,4.16a5.61,5.61,0,0,0,1,3c3,5.23,6.49,10.51,11.67,13.62s12.54,3.41,16.81-.88a20.87,20.87,0,0,0,3.46-5.25l2.58-4.94a2.73,2.73,0,0,0,.45-2.08,2.6,2.6,0,0,0-.93-1.1,28.89,28.89,0,0,0-9.22-4.92c-4.3-1.37-9.33-2-12.06-5.58Z"/>
+            <path class="cls-7" d="M543.22,204.25a10.75,10.75,0,0,0-12,4.5,6.29,6.29,0,0,0-1.06,3.6,8.73,8.73,0,0,0,1.44,3.75q3.9,6.77,8.44,13.13a11.48,11.48,0,0,0,3.06,3.26,8.64,8.64,0,0,0,4.2,1.14,16.48,16.48,0,0,0,13.2-5.69,2.36,2.36,0,0,0,.64-1.15,2.22,2.22,0,0,0-.26-1.18c-2-4.58-7.38-6.54-11-10a16.86,16.86,0,0,1-5.22-10.92Z"/>
+            <path class="cls-7" d="M522.79,218.1a15.71,15.71,0,0,0-12.21,3.43,5.9,5.9,0,0,0-1.74,2.14c-1.06,2.59,1.11,5.24,2.54,7.65,1.56,2.64,2.33,5.67,3.49,8.51s2.88,5.66,5.63,7a10.59,10.59,0,0,0,7.83.28,27.86,27.86,0,0,0,7-3.77c1.15-.78,2.39-1.73,2.59-3.1.23-1.68-1.18-3.09-2.44-4.22-5.27-4.7-10.37-10.49-10.93-17.53Z"/>
+            <path class="cls-7" d="M501.81,228.86a54,54,0,0,1-15.24,5.4,4.31,4.31,0,0,0-2.45,1c-1.24,1.31-.34,3.45.62,5q3.51,5.61,7.18,11.13a5.76,5.76,0,0,0,5.69,3.35c2.95.18,5.92.22,8.88.12a3,3,0,0,0,1.18-.2,2.59,2.59,0,0,0,1.18-2.18c.28-2.76-.84-5.45-1.31-8.18s-.26-5.7-.8-8.49-2.09-5.66-4.78-6.58Z"/>
+            <path class="cls-7" d="M473,239.92,465.23,242c-2.41.64-5.27,1.76-5.63,4.23-.3,2,1.29,3.75,2.1,5.62.66,1.51.82,3.18,1.46,4.7,1.08,2.56,3.39,4.37,5.61,6.06a19.87,19.87,0,0,0,5.31,3.24,15.44,15.44,0,0,0,4.59.77,12.14,12.14,0,0,0,5.49-.74,5.38,5.38,0,0,0,3.34-4.15c.18-2-1.06-3.79-2.25-5.39l-5-6.78c-2.33-3.15-4.73-6.43-5.56-10.27Z"/>
+            <path class="cls-7" d="M452.78,244.73l-12.29,3.62c-1.62.47-3.39,1.07-4.22,2.53-1,1.72-.23,3.85.52,5.66l3,7.32c1.06,2.59,2.36,5.44,5,6.49a9.19,9.19,0,0,0,3.5.51,36.17,36.17,0,0,0,6.06-.5c1.67-.27,3.56-.87,4.16-2.45a5.35,5.35,0,0,0,.08-2.55l-1.43-10.53c-.46-3.37-1-7-3.43-9.42Z"/>
+            <path class="cls-7" d="M426.19,250.46a66.26,66.26,0,0,0-10.57,1.67,3.16,3.16,0,0,0-3.2,3.65l0,9.49a14.42,14.42,0,0,0,.53,4.86c1,2.93,3.82,4.95,6.79,5.82a29.14,29.14,0,0,0,9.23.69l4-.13a1,1,0,0,0,.71-.22.94.94,0,0,0,.12-.79c-.71-4.79-3.35-9.12-4.2-13.89-.6-3.39-.3-7-1.89-10.1Z"/>
+            <path class="cls-7" d="M402.77,255.82a22.24,22.24,0,0,1-10.1,3.05,11.36,11.36,0,0,0-3.73.49,6.12,6.12,0,0,0-3.43,5.34,16.19,16.19,0,0,0,1.28,6.51c.67,1.87,1.4,3.71,2.18,5.54a10.19,10.19,0,0,0,2.89,4.34c1.82,1.36,4.27,1.43,6.54,1.43a15.64,15.64,0,0,0,4.78-.53,5.29,5.29,0,0,0,3.46-3.1,7.78,7.78,0,0,0,.28-2.5l0-8.55c0-4.59-.18-9.72-3.47-12.92Z"/>
+            <path class="cls-7" d="M375.11,261.45l-8.45-.31c-1.42-.05-3,0-4,1a3.56,3.56,0,0,0-.16,3.93,22.46,22.46,0,0,0,2.55,3.31,13.09,13.09,0,0,1,2.56,5.83c.62,3.73-.39,7.63.56,11.28a1.89,1.89,0,0,0,1.43,1.61,11.94,11.94,0,0,0,12.09-2.51,6.07,6.07,0,0,0,2.13-4.16,8.09,8.09,0,0,0-.68-2.84l-5.93-15.9Z"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="seahorse-container">
+      <svg class="svg-seahorse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.94 187.92">
+        <defs>
+          <style>
+            .cls-8{fill:#e8a246;}.cls-9{fill:#efefef;}.cls-10{fill:#fff;}.cls-11{fill:#fff983;}.cls-12{fill:none;stroke:#fff983;stroke-miterlimit:10;}
+          </style>
+        </defs>
+        <g id="Calque_2" class="seahorse" data-name="Calque 2">
+          <g id="Calque_1-2" data-name="Calque 1">
+            <path class="cls-8" d="M98.85,98.7c-.92,9.17-3.9,21.33-3.67,26.83s-1.83,10.32-7.34,6.19l-1-.8c-2.91-2.24-6.14-4.87-9-5.68-2.36-.68-4.44-.09-5.81,3-3.21,7.34,11.24,8.26,11.24,8.26s1.6.23-.23,4.35-2.52,1.84-1.38,8.26S87.84,156,87.84,156s3.67,3.9-3.43,6.88-.69,14.9-.69,14.9-.23,2.75-4.82,3.44-4.81,1.38-9.4,3.9a23,23,0,0,1-18.11,1.6c-6.65-2.29-9.18-8.71-11-9.86s-2.52-6.42-.46-12.84,1.38-3.9,5-6,4.58-3.67,8.25-2.06,7.34,1.83,6.88,6.42-2.06,10.78-4.59,9.4-.91-2.29-.91-2.29,3.21-5.05-.69-5.74-6.87.46-6.87,3.44,2.28,9.18,6.87,9.63,11.69-1.83,12.84-8c.86-4.64,1-11.21-1.3-15.66a8.84,8.84,0,0,0-3.06-3.6c-4.07-2.66-9-9.28-17.64-14.69A49.33,49.33,0,0,0,36,130.58c-5.42-3.67-6.65-4.82-7.56-8.26s-5.72-15.59-4.59-22.52c1.05-6.47,10.78-27.7,18.34-33.89,7.37-6,8-4.66,11.62-6.71l.31-.17a5.67,5.67,0,0,0,1.41-1.18c2.27-2.65,1.37-6.71-2.56-4.55-4.58,2.52-4.81,5.5-7.34,5.05S38.32,54.45,34,59s-17.2,8.72-20.64,10.55a5.38,5.38,0,0,1-3.28.17c2-.82,6.39-2.83,7.91-4.81C16,67.12,8.41,69.37,8.41,69.37,3.51,67.93-2.31,63.89.94,60.64c0,0,6.19.92,10.55-1.38S13.09,46.42,14,43.9a21.82,21.82,0,0,1,3.21-5.27s-2.75-6.19-1.6-6.19,4.12,3.66,6.19,2.75,11-10.55,11.69-12.84S38.09,1,38.09,1,48.86-1.27,48.86,1s-.68,17.89,3,19,8.72-3.67,11.47-2.29-.23,9.4,2.75,11.47S76.84,33.81,81,33.58s5,4.13,3.44,5.73-7.34,2.3-6,8.95,4.25,9.63,6.71,11.23,3.27,5.28,0,6.88S75.23,68.89,75,75.08s6.65,8.49,6.65,8.49A6.48,6.48,0,0,1,77.76,90c-4.36,1.83-7.8,2.06-6.65,5.5.66,2,3.84,2.29,7.62,1.84a54.13,54.13,0,0,0,8.58-1.84c.79-.23,1.57-.5,2.35-.77C95,92.83,99.65,90.68,98.85,98.7Z" />
+            <g class='seahorse-eye' data-name="Calque 1">
+              <circle class="cls-9" cx="28.09" cy="48.61" r="9.73" />
+              <circle cx="28.09" cy="48.61" r="5.43" />
+              <circle class="cls-10" cx="26.64" cy="51.73" r="2.13" />
+            </g>
+            <path class="cls-10" d="M30.44,47.3a1.41,1.41,0,0,1,1.78,2.18c-.6.5-.15-.69-.64-1.29S29.84,47.8,30.44,47.3Z" />
+            <path class="cls-11" d="M91.21,114.45c-1,2.6.53,5.12.46,7.34s-2,.91-2.37,2.75,1.68,3,1.53,4.12-3.67.39-4,2.26c-2.91-2.24-6.14-4.87-9-5.68.16-2.18,3.59-3.61,4.13-5.44s-2.6-2.83-2.56-4.43S81.88,112.61,82,110s-3.29-3.13-3.59-4.89,2.75-1.91,2.67-4.35c0-1.3-1.21-2.55-2.31-3.44a54.13,54.13,0,0,0,8.58-1.84c.79-.23,1.57-.5,2.35-.77,1.29,1.63,2.85,4.26,2.69,5.36a27.09,27.09,0,0,0-.15,7.18A13.55,13.55,0,0,1,91.21,114.45Z" />
+            <path class="cls-11" d="M18,64.93a3.41,3.41,0,0,0,.28-.42A1.71,1.71,0,0,1,18,64.93Z" />
+            <circle class="cls-11" cx="40.67" cy="20.63" r="1.93" />
+            <circle class="cls-11" cx="36.25" cy="24.47" r="1.03" />
+            <circle class="cls-11" cx="40.4" cy="27.67" r="0.57" />
+            <circle class="cls-12" cx="54.93" cy="26.87" r="1.37" />
+            <circle class="cls-12" cx="56.88" cy="31.81" r="0.58" />
+            <circle class="cls-12" cx="63.63" cy="32.28" r="1.05" />
+            <circle class="cls-12" cx="65.04" cy="40.15" r="0.35" />
+            <circle class="cls-12" cx="69.81" cy="36.47" r="1.26" />
+            <circle class="cls-12" cx="72.41" cy="41.84" r="1.34" />
+            <circle class="cls-12" cx="75.07" cy="36.88" r="0.41" />
+            <circle class="cls-12" cx="70.44" cy="50.23" r="0.63" />
+            <circle class="cls-12" cx="77.21" cy="57.32" r="1.02" />
+            <circle class="cls-12" cx="71.74" cy="62.63" r="0.67" />
+            <circle class="cls-12" cx="78.49" cy="63.23" r="1.28" />
+            <circle class="cls-12" cx="72.07" cy="67.8" r="0.34" />
+            <circle class="cls-12" cx="72.74" cy="82.38" r="1.01" />
+            <circle class="cls-12" cx="76.14" cy="86.42" r="1.07" />
+            <circle class="cls-12" cx="69.49" cy="88.43" r="0.95" />
+            <circle class="cls-12" cx="68.09" cy="82.83" r="0.46" />
+            <circle class="cls-12" cx="96.21" cy="96.81" r="0.76" />
+            <circle class="cls-12" cx="94.84" cy="102.01" r="0.61" />
+            <circle class="cls-12" cx="94.77" cy="110.04" r="0.54" />
+            <circle class="cls-12" cx="93.06" cy="116.92" r="0.7" />
+            <circle class="cls-12" cx="93.64" cy="125.68" r="0.58" />
+            <circle class="cls-12" cx="77.34" cy="111.19" r="1.15" />
+            <circle class="cls-12" cx="74.41" cy="100.22" r="0.66" />
+            <circle class="cls-12" cx="75.48" cy="119.94" r="1.73" />
+            <circle class="cls-12" cx="73.1" cy="107.13" r="0.69" />
+            <circle class="cls-12" cx="73.41" cy="139.09" r="1" />
+            <circle class="cls-12" cx="78.99" cy="139.59" r="0.5" />
+            <circle class="cls-12" cx="75.85" cy="146.5" r="0.78" />
+            <circle class="cls-12" cx="80.23" cy="156.25" r="0.74" />
+            <circle class="cls-12" cx="74.99" cy="153.04" r="1.2" />
+            <circle class="cls-12" cx="77.23" cy="163.3" r="0.6" />
+            <circle class="cls-12" cx="83.3" cy="159.56" r="0.54" />
+            <circle class="cls-12" cx="74.86" cy="157.53" r="0.12" />
+            <circle class="cls-12" cx="72.47" cy="170.16" r="0.6" />
+            <circle class="cls-12" cx="76.85" cy="174.4" r="0.66" />
+            <circle class="cls-12" cx="78.12" cy="170.44" r="0.89" />
+            <circle class="cls-12" cx="68.2" cy="177.52" r="1.15" />
+            <circle class="cls-12" cx="64.1" cy="181.68" r="0.37" />
+            <circle class="cls-12" cx="74.21" cy="179.67" r="0.43" />
+            <circle class="cls-12" cx="56.39" cy="180.33" r="1.09" />
+            <circle class="cls-12" cx="59.23" cy="184.6" r="0.72" />
+            <circle class="cls-12" cx="50.57" cy="182.02" r="0.72" />
+            <circle class="cls-12" cx="48.22" cy="176.64" r="0.26" />
+            <circle class="cls-12" cx="42.22" cy="172.69" r="0.39" />
+            <circle class="cls-12" cx="42.03" cy="164.7" r="0.19" />
+            <circle class="cls-12" cx="45.7" cy="161.85" r="0.32" />
+            <circle class="cls-12" cx="43.74" cy="167.68" r="0.19" />
+            <circle class="cls-12" cx="51.04" cy="158.44" r="0.47" />
+            <circle class="cls-12" cx="53.15" cy="160.53" r="0.43" />
+            <circle class="cls-12" cx="57.25" cy="161.3" r="0.34" />
+            <path class="cls-11" d="M53.53,98.59c-.23,2.69.62,4.38,0,7.24s-2.29,3.46-3,5.36.82,5.31-.71,8.09-3.26,4.43-3.84,7-1.74,3.62-1.21,6.32a5.74,5.74,0,0,1-.06,2.34A49.33,49.33,0,0,0,36,130.58c-5.42-3.67-6.65-4.82-7.56-8.26s-5.72-15.59-4.59-22.52c1.05-6.47,10.78-27.7,18.34-33.89,7.37-6,8-4.66,11.62-6.71,1.15.22,2.15.78,2.1,2.07-.11,3-1.86,6.15-1.29,8.33s1,5.43,1.29,7.38-2.65,3.13-2.35,5.85,1.83,2.9,1.72,8S53.75,95.9,53.53,98.59Z" />
+            <circle class="cls-8" cx="57.08" cy="165.43" r="0.17" />
+            <circle class="cls-8" cx="36.21" cy="80.03" r="0.8" />
+            <circle class="cls-8" cx="34" cy="86.84" r="2.1" />
+            <circle class="cls-8" cx="38.5" cy="84.46" r="0.79" />
+            <circle class="cls-8" cx="30.43" cy="93.81" r="1.62" />
+            <circle class="cls-8" cx="34.97" cy="92.21" r="0.63" />
+            <circle class="cls-8" cx="28.25" cy="102.37" r="1.83" />
+            <circle class="cls-8" cx="32.95" cy="99.64" r="1.05" />
+            <circle class="cls-8" cx="36.9" cy="97.33" r="0.8" />
+            <circle class="cls-8" cx="33.66" cy="104.29" r="0.72" />
+            <circle class="cls-8" cx="28.71" cy="109.19" r="1.38" />
+            <circle class="cls-8" cx="33.19" cy="109.44" r="0.47" />
+            <circle class="cls-8" cx="30.08" cy="115.1" r="0.69" />
+            <circle class="cls-8" cx="33.02" cy="113.79" r="0.97" />
+            <circle class="cls-8" cx="32.37" cy="120.14" r="0.86" />
+            <circle class="cls-8" cx="35.29" cy="117.76" r="0.32" />
+            <circle class="cls-8" cx="35.4" cy="123.9" r="0.43" />
+            <circle class="cls-8" cx="31.92" cy="124.5" r="0.4" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="js/data.js"></script>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/usefullfunction.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dialogues.js"></script>
+  </body>
+</html>
